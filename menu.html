@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a0a00" />
+  <meta name="description" content="Brew & Bloom Café menu — breakfast, lunch, drinks, and desserts made fresh daily." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Menu – Brew &amp; Bloom Café</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="shortcut icon" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+
+  <div class="blob-bg"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="logo" aria-label="Brew and Bloom home">Brew <span>&amp;</span> Bloom</a>
+
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <!-- Cart button -->
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart" aria-haspopup="dialog" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-label">Cart</span>
+        <span class="cart-badge" id="cartBadge" aria-live="polite">0</span>
+      </button>
+
+      <button class="hamburger" id="hamburger"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+        type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html" class="active" aria-current="page">Menu</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-label="Menu page banner">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80&auto=format');"></div>
+    <div class="page-hero-content">
+      <span class="section-label" style="display:block; margin-bottom:0.75rem;">✦ Fresh Daily</span>
+      <h1>Our Menu</h1>
+      <p>Handcrafted food and drinks made with love — every single morning</p>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="section" aria-label="Menu items">
+    <div class="section-inner">
+
+      <!-- TABS -->
+      <div class="menu-tabs reveal" role="tablist" aria-label="Menu categories">
+        <button class="tab-btn active" data-tab="breakfast" role="tab" aria-selected="true"  aria-controls="breakfast">🍳 Breakfast</button>
+        <button class="tab-btn"        data-tab="lunch"     role="tab" aria-selected="false" aria-controls="lunch">🥪 Lunch</button>
+        <button class="tab-btn"        data-tab="drinks"    role="tab" aria-selected="false" aria-controls="drinks">☕ Drinks</button>
+        <button class="tab-btn"        data-tab="desserts"  role="tab" aria-selected="false" aria-controls="desserts">🍰 Desserts</button>
+      </div>
+
+      <!-- ══ BREAKFAST ══ -->
+      <div class="menu-section active" id="breakfast" role="tabpanel">
+        <div class="menu-card reveal" data-name="Eggs Benedict" data-price="10.00" data-img="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?w=600&q=80&auto=format" alt="Eggs Benedict with hollandaise sauce" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Eggs Benedict</h3>
+            <p>Poached eggs on toasted muffin with hollandaise sauce and crispy back bacon.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$10.00</span>
+              <span class="tag-badge">Chef's Pick</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Eggs Benedict to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Fluffy Pancakes" data-price="8.50" data-img="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80&auto=format" alt="Fluffy pancakes with fresh berries" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Fluffy Pancakes</h3>
+            <p>Stack of three buttermilk pancakes with maple syrup, fresh berries &amp; whipped cream.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$8.50</span>
+              <span class="tag-badge">Bestseller</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Fluffy Pancakes to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Avocado Toast" data-price="9.00" data-img="https://images.unsplash.com/photo-1541519227354-08fa5d50c820?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1541519227354-08fa5d50c820?w=600&q=80&auto=format" alt="Avocado toast on sourdough" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Avocado Toast</h3>
+            <p>Smashed avocado on sourdough with cherry tomatoes, feta &amp; a drizzle of olive oil.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$9.00</span>
+              <span class="tag-badge">Vegan</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Avocado Toast to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Granola Bowl" data-price="7.50" data-img="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=600&q=80&auto=format" alt="Granola bowl with yogurt and fruit" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Granola Bowl</h3>
+            <p>Homemade granola layered with Greek yogurt, local honey, and seasonal fruit.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$7.50</span>
+              <span class="tag-badge">Healthy</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Granola Bowl to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Butter Croissant" data-price="3.00" data-img="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=80&auto=format" alt="Golden butter croissant" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Butter Croissant</h3>
+            <p>Golden, flaky croissant freshly baked each morning — served plain or with fruit jam.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$3.00</span>
+              <span class="tag-badge">Fresh Baked</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Butter Croissant to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Full Breakfast Plate" data-price="13.00" data-img="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600&q=80&auto=format" alt="Full breakfast plate" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Full Breakfast Plate</h3>
+            <p>Eggs your way, toast, grilled tomato, sausage, mushrooms, and baked beans.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$13.00</span>
+              <span class="tag-badge">Hearty</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Full Breakfast Plate to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ LUNCH ══ -->
+      <div class="menu-section" id="lunch" role="tabpanel">
+        <div class="menu-card reveal" data-name="Garden Salad Bowl" data-price="8.00" data-img="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80&auto=format" alt="Garden salad bowl" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Garden Salad Bowl</h3>
+            <p>Mixed greens, cucumber, cherry tomatoes, croutons, and honey-mustard dressing.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$8.00</span>
+              <span class="tag-badge">Vegan</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Garden Salad Bowl to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Club Sandwich" data-price="11.00" data-img="https://images.unsplash.com/photo-1528736235302-52922df5c122?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1528736235302-52922df5c122?w=600&q=80&auto=format" alt="Club sandwich" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Club Sandwich</h3>
+            <p>Triple-decker toasted sandwich with chicken, bacon, lettuce, tomato, and mayo.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$11.00</span>
+              <span class="tag-badge">Popular</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Club Sandwich to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Tomato Basil Soup" data-price="7.00" data-img="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&q=80&auto=format" alt="Tomato basil soup" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Tomato Basil Soup</h3>
+            <p>Slow-simmered tomato soup with fresh basil, served with a warm crusty bread roll.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$7.00</span>
+              <span class="tag-badge">Comfort</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Tomato Basil Soup to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Veggie Wrap" data-price="9.50" data-img="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80&auto=format" alt="Veggie wrap" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Veggie Wrap</h3>
+            <p>Grilled vegetables, hummus, and feta wrapped in a warm whole-wheat tortilla.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$9.50</span>
+              <span class="tag-badge">Vegetarian</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Veggie Wrap to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Pasta of the Day" data-price="12.00" data-img="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80&auto=format" alt="Fresh pasta" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Pasta of the Day</h3>
+            <p>Freshly prepared pasta special — ask our team for today's creation from the kitchen.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$12.00</span>
+              <span class="tag-badge">Daily Special</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Pasta of the Day to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Grilled Chicken Plate" data-price="13.50" data-img="https://images.unsplash.com/photo-1598103442097-8b74394b95c4?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1598103442097-8b74394b95c4?w=600&q=80&auto=format" alt="Grilled chicken plate" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Grilled Chicken Plate</h3>
+            <p>Herb-marinated grilled chicken with roasted vegetables and a fresh side salad.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$13.50</span>
+              <span class="tag-badge">High Protein</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Grilled Chicken Plate to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ DRINKS ══ -->
+      <div class="menu-section" id="drinks" role="tabpanel">
+        <div class="menu-card reveal" data-name="Signature Latte" data-price="4.50" data-img="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80&auto=format" alt="Signature latte" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Signature Latte</h3>
+            <p>Smooth espresso with velvety steamed milk, a hint of vanilla &amp; hand-poured latte art.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$4.50</span>
+              <span class="tag-badge">Most Loved</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Signature Latte to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Matcha Latte" data-price="5.00" data-img="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?w=600&q=80&auto=format" alt="Matcha latte" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Matcha Latte</h3>
+            <p>Premium ceremonial-grade matcha whisked with warm oat milk — earthy and calming.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$5.00</span>
+              <span class="tag-badge">Trending</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Matcha Latte to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Fresh Orange Juice" data-price="4.00" data-img="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=600&q=80&auto=format" alt="Fresh orange juice" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Fresh Orange Juice</h3>
+            <p>Cold-pressed oranges, served chilled — nothing added, nothing removed.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$4.00</span>
+              <span class="tag-badge">Fresh Pressed</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Fresh Orange Juice to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Iced Caramel Coffee" data-price="5.50" data-img="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80&auto=format" alt="Iced caramel coffee" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Iced Caramel Coffee</h3>
+            <p>Cold-brew espresso over ice with house-made caramel drizzle and a splash of cream.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$5.50</span>
+              <span class="tag-badge">Summer Hit</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Iced Caramel Coffee to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Belgian Hot Chocolate" data-price="4.50" data-img="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=600&q=80&auto=format" alt="Belgian hot chocolate" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Belgian Hot Chocolate</h3>
+            <p>Rich Belgian chocolate melted into steamed whole milk, topped with fresh whipped cream.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$4.50</span>
+              <span class="tag-badge">Cozy Classic</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Belgian Hot Chocolate to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Artisan Herbal Tea" data-price="3.50" data-img="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&q=80&auto=format" alt="Herbal tea in a pot" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Artisan Herbal Tea</h3>
+            <p>Choose from chamomile, peppermint, or green tea — steeped &amp; served in a warm pot.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$3.50</span>
+              <span class="tag-badge">Calming</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Artisan Herbal Tea to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ DESSERTS ══ -->
+      <div class="menu-section" id="desserts" role="tabpanel">
+        <div class="menu-card reveal" data-name="Carrot Cake Slice" data-price="5.00" data-img="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&q=80&auto=format" alt="Carrot cake slice" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Carrot Cake Slice</h3>
+            <p>Moist spiced carrot cake with cream cheese frosting and candied walnut crumble.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$5.00</span>
+              <span class="tag-badge">Freshly Baked</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Carrot Cake Slice to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Crème Brûlée" data-price="6.50" data-img="https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=600&q=80&auto=format" alt="Crème brûlée" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Crème Brûlée</h3>
+            <p>Classic Tahitian vanilla custard with a perfectly caramelised sugar crust.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$6.50</span>
+              <span class="tag-badge">Signature</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Crème Brûlée to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Chocolate Chip Cookies" data-price="3.50" data-img="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600&q=80&auto=format" alt="Chocolate chip cookies" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Chocolate Chip Cookies</h3>
+            <p>Warm, freshly baked cookies loaded with gooey chocolate chunks — two per plate.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$3.50</span>
+              <span class="tag-badge">Warm Daily</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Chocolate Chip Cookies to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Blueberry Muffin" data-price="3.00" data-img="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=600&q=80&auto=format" alt="Blueberry muffin" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Blueberry Muffin</h3>
+            <p>Fluffy muffin bursting with fresh blueberries, topped with a golden streusel crust.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$3.00</span>
+              <span class="tag-badge">Morning Fave</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Blueberry Muffin to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="Artisan Ice Cream" data-price="4.00" data-img="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&q=80&auto=format" alt="Artisan ice cream" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Artisan Ice Cream</h3>
+            <p>Two generous scoops — choose vanilla bean, dark chocolate, or strawberry sorbet.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$4.00</span>
+              <span class="tag-badge">House Made</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add Artisan Ice Cream to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-card reveal" data-name="NY Cheesecake Slice" data-price="6.00" data-img="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=120&q=70&auto=format">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80&auto=format" alt="New York cheesecake slice" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>NY Cheesecake Slice</h3>
+            <p>New York baked cheesecake on a buttery biscuit base, with seasonal berry compote.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$6.00</span>
+              <span class="tag-badge">Crowd Pleaser</span>
+            </div>
+            <button class="add-to-cart-btn" aria-label="Add NY Cheesecake Slice to cart" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" aria-label="Call to action">
+    <div class="cta-band-bg"></div>
+    <div class="cta-band-content reveal">
+      <span class="section-label">✦ Taste It In Person</span>
+      <h2>Nothing Beats<br>The Real Thing</h2>
+      <p>Come visit us and experience every dish fresh from our kitchen.</p>
+      <a href="contact.html" class="btn btn-gold">Find Our Café →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">Brew <span>&amp;</span> Bloom</div>
+        <p>A cozy café serving fresh food and specialty coffee since 2018. Built on warmth, quality, and community.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📸</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="TikTok">🎵</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li><span style="color:rgba(255,255,255,0.7)">Mon – Fri</span></li>
+          <li><span style="color:rgba(255,255,255,0.4)">7:00 AM – 9:00 PM</span></li>
+          <li><span style="color:rgba(255,255,255,0.7)">Sat – Sun</span></li>
+          <li><span style="color:rgba(255,255,255,0.4)">8:00 AM – 10:00 PM</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+15550123456">+1 (555) 012-3456</a></li>
+          <li><a href="mailto:hello@brewandbloom.com">hello@brewandbloom.com</a></li>
+          <li><span style="color:rgba(255,255,255,0.7)">14 Bloom Street</span></li>
+          <li><span style="color:rgba(255,255,255,0.4)">Downtown, CA 90210</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Brew &amp; Bloom Café. All rights reserved.</p>
+      <p>Crafted with ☕ &amp; care.</p>
+    </div>
+  </footer>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Your cart">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Your Order
+        <span class="cart-count-label" id="cartCountLabel"></span>
+      </div>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart" type="button">✕</button>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList"></div>
+
+    <div class="cart-drawer-footer" id="cartFooter" style="display:none;">
+      <div class="cart-summary">
+        <div class="cart-summary-row"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+        <div class="cart-summary-row"><span>Service (10%)</span><span id="cartService">$0.00</span></div>
+        <div class="cart-summary-row total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+      </div>
+      <div class="cart-footer-btns">
+        <button class="btn btn-gold btn-checkout" id="checkoutBtn" type="button">Place Order ✦</button>
+        <button class="btn-clear-cart" id="clearCartBtn" type="button">Clear cart</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CHECKOUT SUCCESS MODAL -->
+  <div class="checkout-modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Order confirmed">
+    <div class="checkout-modal">
+      <span class="modal-icon">✅</span>
+      <h3>Order Placed!</h3>
+      <p>Thank you for your order. Our team is already preparing it fresh for you.</p>
+      <span class="order-ref" id="orderRef"></span>
+      <p style="font-size:0.82rem; margin-top:0.5rem;">Please come to the counter to collect your order.</p>
+      <button class="btn btn-gold" id="modalDoneBtn" type="button" style="margin-top:1.5rem; width:100%; justify-content:center;">
+        Done
+      </button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>

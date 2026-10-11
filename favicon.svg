@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- background circle -->
+  <circle cx="32" cy="32" r="32" fill="#1a0a00"/>
+  <!-- cup body -->
+  <rect x="14" y="24" width="28" height="22" rx="4" ry="4" fill="#d4a853"/>
+  <!-- cup handle -->
+  <path d="M42 29 Q54 29 54 36 Q54 43 42 43" fill="none" stroke="#d4a853" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- saucer -->
+  <ellipse cx="28" cy="47" rx="18" ry="3.5" fill="#c9844e"/>
+  <!-- steam lines -->
+  <path d="M22 20 Q24 15 22 10" fill="none" stroke="#f0cc7a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M28 18 Q30 12 28 7"  fill="none" stroke="#f0cc7a" stroke-width="2" stroke-linecap="round"/>
+  <path d="M34 20 Q36 15 34 10" fill="none" stroke="#f0cc7a" stroke-width="2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a0a00" />
+  <meta name="description" content="Contact Brew & Bloom Café — find us at 14 Bloom Street, Downtown or send us a message." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Contact – Brew &amp; Bloom Café</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="shortcut icon" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+
+  <div class="blob-bg"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="logo" aria-label="Brew and Bloom home">Brew <span>&amp;</span> Bloom</a>
+
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart" aria-haspopup="dialog" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-label">Cart</span>
+        <span class="cart-badge" id="cartBadge" aria-live="polite">0</span>
+      </button>
+      <button class="hamburger" id="hamburger"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+      type="button">
+      <span></span><span></span><span></span>
+    </button>
+    </div>
+
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-label="Contact page banner">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1600&q=80&auto=format');"></div>
+    <div class="page-hero-content">
+      <span class="section-label" style="display:block; margin-bottom:0.75rem;">✦ We're Here For You</span>
+      <h1>Get In Touch</h1>
+      <p>Questions, feedback, or just want to say hello — we'd love to hear from you</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section" aria-label="Contact information and form">
+    <div class="contact-grid">
+
+      <!-- INFO -->
+      <div class="contact-info reveal">
+        <h3>Visit or Reach Out</h3>
+        <p>We're open seven days a week. Drop by anytime — no reservation required.</p>
+
+        <div class="info-row">
+          <div class="info-row-icon" aria-hidden="true">📍</div>
+          <div class="info-row-text">
+            <strong>Address</strong>
+            <span>14 Bloom Street, City Center<br>Downtown, CA 90210</span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-row-icon" aria-hidden="true">📞</div>
+          <div class="info-row-text">
+            <strong>Phone</strong>
+            <span><a href="tel:+15550123456" style="color:inherit;">+1 (555) 012-3456</a></span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-row-icon" aria-hidden="true">✉️</div>
+          <div class="info-row-text">
+            <strong>Email</strong>
+            <span><a href="mailto:hello@brewandbloom.com" style="color:inherit;">hello@brewandbloom.com</a></span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-row-icon" aria-hidden="true">⏰</div>
+          <div class="info-row-text">
+            <strong>Opening Hours</strong>
+            <span>Mon – Fri: 7:00 AM – 9:00 PM<br>Sat – Sun: 8:00 AM – 10:00 PM</span>
+          </div>
+        </div>
+        <div class="info-row">
+          <div class="info-row-icon" aria-hidden="true">🅿️</div>
+          <div class="info-row-text">
+            <strong>Parking</strong>
+            <span>Free street parking on Bloom Street and all adjacent roads.</span>
+          </div>
+        </div>
+
+        <div class="map-placeholder">
+          <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=700&q=75&auto=format" alt="Map showing Downtown area near Bloom Street" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <div class="contact-form-wrap reveal">
+        <h3>Send Us a Message</h3>
+        <p>We typically respond within a few hours during business hours.</p>
+
+        <form id="contactForm" novalidate autocomplete="on">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name <span aria-hidden="true" style="color:var(--gold)">*</span></label>
+              <input type="text" id="fname" name="fname" placeholder="Sarah" required autocomplete="given-name" />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Johnson" autocomplete="family-name" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address <span aria-hidden="true" style="color:var(--gold)">*</span></label>
+            <input type="email" id="email" name="email" placeholder="sarah@email.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="e.g. Reservation enquiry, feedback…" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message <span aria-hidden="true" style="color:var(--gold)">*</span></label>
+            <textarea id="message" name="message" placeholder="Write your message here — we read every single one…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold" style="width:100%; justify-content:center; font-size:1rem; padding:1rem 2rem;">
+            Send Message ✦
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FULL-WIDTH IMAGE BAND -->
+  <section aria-hidden="true" style="position:relative; z-index:1; height:320px; overflow:hidden;">
+    <img
+      src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1800&q=80&auto=format"
+      alt=""
+      style="width:100%; height:100%; object-fit:cover; opacity:0.55;"
+      loading="lazy"
+    />
+    <div style="
+      position:absolute; inset:0;
+      background: linear-gradient(to right, rgba(26,10,0,0.75), rgba(26,10,0,0.15));
+      display:flex; align-items:center;
+      padding: 3rem 2rem;
+    ">
+      <div>
+        <p style="color:var(--gold); font-size:0.78rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:0.75rem;">✦ We Can't Wait to See You</p>
+        <h2 style="font-family:'Playfair Display',serif; font-size:clamp(1.7rem,4vw,3rem); color:white; font-weight:700; line-height:1.2; max-width:500px;">Your Table is Always<br>Ready at Brew &amp; Bloom</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">Brew <span>&amp;</span> Bloom</div>
+        <p>A cozy café serving fresh food and specialty coffee since 2018. Built on warmth, quality, and community.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Brew and Bloom on Facebook">📘</a>
+          <a href="#" aria-label="Brew and Bloom on Instagram">📸</a>
+          <a href="#" aria-label="Brew and Bloom on Twitter">🐦</a>
+          <a href="#" aria-label="Brew and Bloom on TikTok">🎵</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li><span style="color:rgba(255,255,255,0.7)">Mon – Fri</span></li>
+          <li><span style="color:rgba(255,255,255,0.4)">7:00 AM – 9:00 PM</span></li>
+          <li><span style="color:rgba(255,255,255,0.7)">Sat – Sun</span></li>
+          <li><span style="color:rgba(255,255,255,0.4)">8:00 AM – 10:00 PM</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+15550123456">+1 (555) 012-3456</a></li>
+          <li><a href="mailto:hello@brewandbloom.com">hello@brewandbloom.com</a></li>
+          <li><span style="color:rgba(255,255,255,0.7)">14 Bloom Street</span></li>
+          <li><span style="color:rgba(255,255,255,0.4)">Downtown, CA 90210</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Brew &amp; Bloom Café. All rights reserved.</p>
+      <p>Crafted with ☕ &amp; care.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Your cart">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Your Order
+        <span class="cart-count-label" id="cartCountLabel"></span>
+      </div>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart" type="button">✕</button>
+    </div>
+    <div class="cart-items-list" id="cartItemsList"></div>
+    <div class="cart-drawer-footer" id="cartFooter" style="display:none;">
+      <div class="cart-summary">
+        <div class="cart-summary-row"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+        <div class="cart-summary-row"><span>Service (10%)</span><span id="cartService">$0.00</span></div>
+        <div class="cart-summary-row total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+      </div>
+      <div class="cart-footer-btns">
+        <button class="btn btn-gold btn-checkout" id="checkoutBtn" type="button">Place Order ✦</button>
+        <button class="btn-clear-cart" id="clearCartBtn" type="button">Clear cart</button>
+      </div>
+    </div>
+  </aside>
+  <div class="checkout-modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Order confirmed">
+    <div class="checkout-modal">
+      <span class="modal-icon">✅</span>
+      <h3>Order Placed!</h3>
+      <p>Thank you for your order. Our team is already preparing it fresh for you.</p>
+      <span class="order-ref" id="orderRef"></span>
+      <p style="font-size:0.82rem; margin-top:0.5rem;">Please come to the counter to collect your order.</p>
+      <button class="btn btn-gold" id="modalDoneBtn" type="button" style="margin-top:1.5rem; width:100%; justify-content:center;">Done</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a0a00" />
+  <meta name="description" content="Brew & Bloom Café – Specialty coffee, handcrafted food, and a warm atmosphere in Downtown City Center." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Brew &amp; Bloom Café</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="shortcut icon" href="favicon.svg" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+
+  <!-- LIQUID BACKGROUND BLOBS -->
+  <div class="blob-bg"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="logo" aria-label="Brew and Bloom home">Brew <span>&amp;</span> Bloom</a>
+
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart" aria-haspopup="dialog" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-label">Cart</span>
+        <span class="cart-badge" id="cartBadge" aria-live="polite">0</span>
+      </button>
+      <button class="hamburger" id="hamburger"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+      type="button">
+      <span></span><span></span><span></span>
+    </button>
+    </div>
+
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Welcome banner">
+    <div class="hero-bg" id="heroBg" role="img" aria-label="Café interior background"></div>
+    <div class="hero-content">
+      <div class="hero-badge">✦ Est. 2018 &nbsp;·&nbsp; Downtown City Center</div>
+      <h1>Where Every Sip<br>Feels Like <span class="highlight">Home</span></h1>
+      <p>Specialty coffee, handcrafted food, and a warm atmosphere crafted for students, workers, families, and everyone in between.</p>
+      <div class="hero-btns">
+        <a href="menu.html" class="btn btn-gold">Explore Menu</a>
+        <a href="contact.html" class="btn btn-glass">Find Us →</a>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section" style="padding: 3rem 2rem;" aria-label="Café statistics">
+    <div class="section-inner">
+      <div class="stats-bar reveal">
+        <div class="stat-item">
+          <span class="num" aria-label="8 plus years open">8+</span>
+          <span class="label">Years Open</span>
+        </div>
+        <div class="stat-item">
+          <span class="num" aria-label="120 plus menu items">120+</span>
+          <span class="label">Menu Items</span>
+        </div>
+        <div class="stat-item">
+          <span class="num" aria-label="4.9 star rating">4.9★</span>
+          <span class="label">Avg. Rating</span>
+        </div>
+        <div class="stat-item">
+          <span class="num" aria-label="500 plus daily guests">500+</span>
+          <span class="label">Daily Guests</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="liquid-divider"></div>
+
+  <!-- FEATURED DISHES -->
+  <section class="section" aria-label="Featured dishes">
+    <div class="section-inner">
+      <div class="section-title reveal">
+        <span class="section-label">✦ Signature Experience</span>
+        <h2>A Feast for the Eyes<br>&amp; the Palate</h2>
+        <p>Handpicked highlights from our kitchen and bar</p>
+        <div class="gold-line"></div>
+      </div>
+      <div class="featured-grid reveal">
+        <div class="featured-card large">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=900&q=85&auto=format" alt="Signature latte with hand-poured latte art" loading="lazy" />
+          <div class="featured-card-overlay">
+            <h3>Signature Latte</h3>
+            <p>Velvety espresso with steamed milk &amp; hand-poured latte art — $4.50</p>
+          </div>
+        </div>
+        <div class="featured-card">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=700&q=80&auto=format" alt="Avocado toast on sourdough" loading="lazy" />
+          <div class="featured-card-overlay">
+            <h3>Avocado Toast</h3>
+            <p>Sourdough, smashed avo, cherry tomatoes — $9.00</p>
+          </div>
+        </div>
+        <div class="featured-card">
+          <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=700&q=80&auto=format" alt="Freshly baked pastries and desserts" loading="lazy" />
+          <div class="featured-card-overlay">
+            <h3>Artisan Desserts</h3>
+            <p>Daily pastries baked fresh every morning — from $3.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="liquid-divider"></div>
+
+  <!-- POPULAR MENU ITEMS -->
+  <section class="section" aria-label="Customer favourites">
+    <div class="section-inner">
+      <div class="section-title reveal">
+        <span class="section-label">✦ Customer Favourites</span>
+        <h2>What Keeps Guests<br>Coming Back</h2>
+        <p>Our most-loved dishes and drinks, served fresh every day</p>
+        <div class="gold-line"></div>
+      </div>
+      <div class="menu-grid">
+        <div class="menu-card reveal">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80&auto=format" alt="Double espresso in a ceramic cup" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Double Espresso</h3>
+            <p>Rich, bold, and perfectly extracted — the foundation of everything we do.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$3.50</span>
+              <span class="tag-badge">Popular</span>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80&auto=format" alt="Fluffy buttermilk pancakes with berries" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Fluffy Pancakes</h3>
+            <p>Buttermilk stack served with fresh berries, maple syrup &amp; whipped cream.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$8.50</span>
+              <span class="tag-badge">Bestseller</span>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80&auto=format" alt="Fresh garden salad bowl" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Garden Salad Bowl</h3>
+            <p>Crisp greens, cherry tomatoes, avocado &amp; honey-mustard dressing.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$8.00</span>
+              <span class="tag-badge">Healthy</span>
+            </div>
+          </div>
+        </div>
+        <div class="menu-card reveal">
+          <img class="menu-card-img" src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&q=80&auto=format" alt="Carrot cake slice with cream cheese frosting" loading="lazy" />
+          <div class="menu-card-body">
+            <h3>Carrot Cake Slice</h3>
+            <p>Moist spiced cake with velvety cream cheese frosting &amp; walnut crumble.</p>
+            <div class="menu-card-footer">
+              <span class="price-tag">$5.00</span>
+              <span class="tag-badge">Freshly Baked</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top: 3rem;">
+        <a href="menu.html" class="btn btn-gold reveal">View Full Menu →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="liquid-divider"></div>
+
+  <!-- WHY US -->
+  <section class="section" aria-label="Why choose us">
+    <div class="section-inner">
+      <div class="section-title reveal">
+        <span class="section-label">✦ Our Promise</span>
+        <h2>More Than Just<br>Great Coffee</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="value-icon">🌿</div>
+          <h3>Fresh Every Day</h3>
+          <p>We source locally and prepare everything from scratch daily. No frozen shortcuts — ever.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">📶</div>
+          <h3>Work-Friendly Space</h3>
+          <p>High-speed Wi-Fi, quiet corners, and power outlets for students and remote workers.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">🌍</div>
+          <h3>Welcoming to All</h3>
+          <p>Students, families, visitors — this is a space where everyone belongs and feels at home.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">⏰</div>
+          <h3>Open Every Day</h3>
+          <p>Seven days a week, from early morning to late evening — because your schedule matters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" aria-label="Call to action">
+    <div class="cta-band-bg"></div>
+    <div class="cta-band-content reveal">
+      <span class="section-label">✦ Come Visit Us</span>
+      <h2>Your Perfect Cup<br>Is Waiting</h2>
+      <p>Walk in any day of the week — we'll have your table ready and the coffee brewing.</p>
+      <a href="contact.html" class="btn btn-gold">Get Directions →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">Brew <span>&amp;</span> Bloom</div>
+        <p>A cozy café serving fresh food and specialty coffee since 2018. Built on warmth, quality, and community.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Brew and Bloom on Facebook">📘</a>
+          <a href="#" aria-label="Brew and Bloom on Instagram">📸</a>
+          <a href="#" aria-label="Brew and Bloom on Twitter">🐦</a>
+          <a href="#" aria-label="Brew and Bloom on TikTok">🎵</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li><span style="color:rgba(255,255,255,0.7)">Mon – Fri</span></li>
+          <li><span style="color:rgba(255,255,255,0.4)">7:00 AM – 9:00 PM</span></li>
+          <li><span style="color:rgba(255,255,255,0.7)">Sat – Sun</span></li>
+          <li><span style="color:rgba(255,255,255,0.4)">8:00 AM – 10:00 PM</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+15550123456">+1 (555) 012-3456</a></li>
+          <li><a href="mailto:hello@brewandbloom.com">hello@brewandbloom.com</a></li>
+          <li><span style="color:rgba(255,255,255,0.7)">14 Bloom Street</span></li>
+          <li><span style="color:rgba(255,255,255,0.4)">Downtown, CA 90210</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Brew &amp; Bloom Café. All rights reserved.</p>
+      <p>Crafted with ☕ &amp; care.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Your cart">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Your Order
+        <span class="cart-count-label" id="cartCountLabel"></span>
+      </div>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart" type="button">✕</button>
+    </div>
+    <div class="cart-items-list" id="cartItemsList"></div>
+    <div class="cart-drawer-footer" id="cartFooter" style="display:none;">
+      <div class="cart-summary">
+        <div class="cart-summary-row"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+        <div class="cart-summary-row"><span>Service (10%)</span><span id="cartService">$0.00</span></div>
+        <div class="cart-summary-row total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+      </div>
+      <div class="cart-footer-btns">
+        <button class="btn btn-gold btn-checkout" id="checkoutBtn" type="button">Place Order ✦</button>
+        <button class="btn-clear-cart" id="clearCartBtn" type="button">Clear cart</button>
+      </div>
+    </div>
+  </aside>
+  <div class="checkout-modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Order confirmed">
+    <div class="checkout-modal">
+      <span class="modal-icon">✅</span>
+      <h3>Order Placed!</h3>
+      <p>Thank you for your order. Our team is already preparing it fresh for you.</p>
+      <span class="order-ref" id="orderRef"></span>
+      <p style="font-size:0.82rem; margin-top:0.5rem;">Please come to the counter to collect your order.</p>
+      <button class="btn btn-gold" id="modalDoneBtn" type="button" style="margin-top:1.5rem; width:100%; justify-content:center;">Done</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>

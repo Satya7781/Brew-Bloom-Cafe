@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a0a00" />
+  <meta name="description" content="Learn about Brew & Bloom Café — our story, values, and the team behind every cup." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>About – Brew &amp; Bloom Café</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="shortcut icon" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+
+  <div class="blob-bg"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="logo" aria-label="Brew and Bloom home">Brew <span>&amp;</span> Bloom</a>
+
+    <div style="display:flex;align-items:center;gap:0.75rem;">
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart" aria-haspopup="dialog" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <span class="cart-label">Cart</span>
+        <span class="cart-badge" id="cartBadge" aria-live="polite">0</span>
+      </button>
+      <button class="hamburger" id="hamburger"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+      aria-controls="navLinks"
+      type="button">
+      <span></span><span></span><span></span>
+    </button>
+    </div>
+
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active" aria-current="page">About</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero" aria-label="About page banner">
+    <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=1600&q=80&auto=format');"></div>
+    <div class="page-hero-content">
+      <span class="section-label" style="display:block; margin-bottom:0.75rem;">✦ Our Story</span>
+      <h1>Behind Every Cup</h1>
+      <p>The people, passion, and purpose that make Brew &amp; Bloom what it is</p>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="section" aria-label="Our story">
+    <div class="about-split">
+      <div class="about-image-wrap reveal">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=900&q=85&auto=format" alt="Warm interior of Brew and Bloom café" loading="lazy" />
+        <div class="about-image-badge">
+          <span class="year">2018</span>
+          <span>Founded with love</span>
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <span class="section-label">✦ How It All Began</span>
+        <h2>A Small Corner,<br>A Big Dream</h2>
+        <p>Brew &amp; Bloom started in 2018 when Maya, a lifelong coffee enthusiast, turned a worn-down corner shop into the warm and welcoming space you see today. What began as a simple idea — a place where anyone could feel at home — quickly became a beloved neighbourhood institution.</p>
+        <p>From the very first day, we believed that great coffee is more than a drink. It's a ritual, a reason to pause, and a way to connect with the world around you. Every detail in our space — from the lighting to the music — is designed to make you feel that.</p>
+        <p>Over the years we've grown our menu, expanded our team, and deepened our roots in the community. But our heart has never changed: honest ingredients, genuine hospitality, and a place where every guest matters.</p>
+        <a href="menu.html" class="btn btn-gold" style="margin-top: 1.5rem; display:inline-flex;">Explore the Menu →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="liquid-divider"></div>
+
+  <!-- VALUES -->
+  <section class="section" aria-label="Our values">
+    <div class="section-inner">
+      <div class="section-title reveal">
+        <span class="section-label">✦ Our Values</span>
+        <h2>What We Believe In</h2>
+        <p>The principles that guide every decision we make</p>
+        <div class="gold-line"></div>
+      </div>
+      <div class="values-grid">
+        <div class="value-card reveal">
+          <div class="value-icon">🌱</div>
+          <h3>Freshness First</h3>
+          <p>Every ingredient is sourced fresh. Our kitchen prepares food daily so you always receive the very best quality.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">🤝</div>
+          <h3>Community Matters</h3>
+          <p>We support local farmers and suppliers. Every purchase here gives back to the community surrounding us.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">♿</div>
+          <h3>Everyone Welcome</h3>
+          <p>Students, families, workers, visitors — our café is designed to be accessible and comfortable for absolutely everyone.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">🍃</div>
+          <h3>Sustainability</h3>
+          <p>We use compostable packaging wherever possible and actively work to reduce food waste across our kitchen every week.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">💛</div>
+          <h3>Quality Always</h3>
+          <p>From the beans we brew to the desserts we bake — quality is never negotiable. We taste everything before it reaches you.</p>
+        </div>
+        <div class="value-card reveal">
+          <div class="value-icon">😊</div>
+          <h3>Genuine Warmth</h3>
+          <p>Our team is trained to be kind, attentive, and helpful. We remember your name and your order — because that's who we are.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="liquid-divider"></div>
+
+  <!-- TEAM -->
+  <section class="section" aria-label="Meet the team">
+    <div class="section-inner">
+      <div class="section-title reveal">
+        <span class="section-label">✦ The Faces Behind the Cup</span>
+        <h2>Meet Our Team</h2>
+        <p>The talented people who pour their heart into every visit</p>
+        <div class="gold-line"></div>
+      </div>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=600&q=80&auto=format" alt="Maya Thornton, Founder and Director" loading="lazy" />
+          <div class="team-card-body">
+            <h3>Maya Thornton</h3>
+            <div class="role">Founder &amp; Director</div>
+            <p>Coffee lover, community builder, and the heart behind every decision at Brew &amp; Bloom. Maya turned a dream into a downtown institution.</p>
+          </div>
+        </div>
+        <div class="team-card reveal">
+          <img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?w=600&q=80&auto=format" alt="Daniel Ortega, Head Chef" loading="lazy" />
+          <div class="team-card-body">
+            <h3>Daniel Ortega</h3>
+            <div class="role">Head Chef</div>
+            <p>Trained in culinary arts with 12 years of experience, Daniel crafts every dish with creativity, care, and the freshest local produce.</p>
+          </div>
+        </div>
+        <div class="team-card reveal">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80&auto=format" alt="Sara Kim, Head Barista" loading="lazy" />
+          <div class="team-card-body">
+            <h3>Sara Kim</h3>
+            <div class="role">Head Barista</div>
+            <p>Sara has been perfecting espresso for 7 years and holds a Q-Grader certification. Every cup she makes is a small work of art.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band" aria-label="Call to action">
+    <div class="cta-band-bg"></div>
+    <div class="cta-band-content reveal">
+      <span class="section-label">✦ We'd Love to See You</span>
+      <h2>Come Experience It<br>For Yourself</h2>
+      <p>No reservation needed — just walk in, find a seat, and let us take care of the rest.</p>
+      <a href="contact.html" class="btn btn-gold">Find Us →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">Brew <span>&amp;</span> Bloom</div>
+        <p>A cozy café serving fresh food and specialty coffee since 2018. Built on warmth, quality, and community.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Brew and Bloom on Facebook">📘</a>
+          <a href="#" aria-label="Brew and Bloom on Instagram">📸</a>
+          <a href="#" aria-label="Brew and Bloom on Twitter">🐦</a>
+          <a href="#" aria-label="Brew and Bloom on TikTok">🎵</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="menu.html">Our Menu</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li><span style="color:rgba(255,255,255,0.7)">Mon – Fri</span></li>
+          <li><span style="color:rgba(255,255,255,0.4)">7:00 AM – 9:00 PM</span></li>
+          <li><span style="color:rgba(255,255,255,0.7)">Sat – Sun</span></li>
+          <li><span style="color:rgba(255,255,255,0.4)">8:00 AM – 10:00 PM</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+15550123456">+1 (555) 012-3456</a></li>
+          <li><a href="mailto:hello@brewandbloom.com">hello@brewandbloom.com</a></li>
+          <li><span style="color:rgba(255,255,255,0.7)">14 Bloom Street</span></li>
+          <li><span style="color:rgba(255,255,255,0.4)">Downtown, CA 90210</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Brew &amp; Bloom Café. All rights reserved.</p>
+      <p>Crafted with ☕ &amp; care.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Your cart">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Your Order
+        <span class="cart-count-label" id="cartCountLabel"></span>
+      </div>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart" type="button">✕</button>
+    </div>
+    <div class="cart-items-list" id="cartItemsList"></div>
+    <div class="cart-drawer-footer" id="cartFooter" style="display:none;">
+      <div class="cart-summary">
+        <div class="cart-summary-row"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+        <div class="cart-summary-row"><span>Service (10%)</span><span id="cartService">$0.00</span></div>
+        <div class="cart-summary-row total"><span>Total</span><span id="cartTotal">$0.00</span></div>
+      </div>
+      <div class="cart-footer-btns">
+        <button class="btn btn-gold btn-checkout" id="checkoutBtn" type="button">Place Order ✦</button>
+        <button class="btn-clear-cart" id="clearCartBtn" type="button">Clear cart</button>
+      </div>
+    </div>
+  </aside>
+  <div class="checkout-modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-label="Order confirmed">
+    <div class="checkout-modal">
+      <span class="modal-icon">✅</span>
+      <h3>Order Placed!</h3>
+      <p>Thank you for your order. Our team is already preparing it fresh for you.</p>
+      <span class="order-ref" id="orderRef"></span>
+      <p style="font-size:0.82rem; margin-top:0.5rem;">Please come to the counter to collect your order.</p>
+      <button class="btn btn-gold" id="modalDoneBtn" type="button" style="margin-top:1.5rem; width:100%; justify-content:center;">Done</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>
