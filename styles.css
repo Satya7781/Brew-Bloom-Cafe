@@ -415,7 +415,7 @@ body::before {
 /* ===== SECTION LAYOUT ===== */
 .section {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   padding: 6rem 2rem;
 }
 
@@ -1095,7 +1095,7 @@ body::before {
 /* ===== FOOTER ===== */
 .footer {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   background: rgba(10, 4, 0, 0.9);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -1194,7 +1194,7 @@ body::before {
 /* ===== CTA BAND ===== */
 .cta-band {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   overflow: hidden;
   padding: 5rem 2rem;
   text-align: center;
@@ -1281,7 +1281,7 @@ body::before {
   .navbar {
     padding: 0 1.25rem;
     height: 64px;
-    z-index: 1200;
+    z-index: 9500;
   }
 
   .logo { font-size: 1.3rem; }
@@ -1292,7 +1292,7 @@ body::before {
     align-items: center;
     gap: 0.6rem;
     position: relative;
-    z-index: 1210;
+    z-index: 9600;
   }
 
   /* Hamburger */
@@ -1301,7 +1301,7 @@ body::before {
     padding: 10px;
     margin: -10px -10px -10px 0;
     position: relative;
-    z-index: 1210;
+    z-index: 9600;
   }
 
   /* ── DIM BACKDROP (real DOM element, injected by JS) ── */
@@ -1310,7 +1310,7 @@ body::before {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.75);
-    z-index: 1150;
+    z-index: 8000;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
   }
@@ -1338,7 +1338,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1160;          /* above backdrop (1150), below navbar (1200) */
+    z-index: 9000;          /* above everything except checkout modal */
 
     background: rgba(8, 3, 0, 0.98);
     backdrop-filter: blur(24px) saturate(220%);
